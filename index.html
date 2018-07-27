@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat websocket</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <input data-elem="name" placeholder="name" required type="text">
+            <input data-elem="nickname" placeholder="nickname" required type="text">
+            <button data-elem="save">save</button>
+        </div>
+
+    </div>
+    <div class="container clearfix">
+        <div class="people-list" id="people-list">
+            <ul class="list" data-elem="users-list">
+
+            </ul>
+        </div>
+
+        <div class="chat">
+            <div class="chat-header clearfix">
+                <div class="chat-about">
+                    <div class="chat-with">
+                        Chat
+                        <span data-elem="title-name">name</span>
+                        <span data-elem="title-nickname">nickname</span>
+                    </div>
+                </div>
+            </div> <!-- end chat-header -->
+
+            <div class="chat-history">
+                <ul data-elem="msg-list">
+                </ul>
+            </div> <!-- end chat-history -->
+            <ul id="typing"></ul>
+            <div class="chat-message clearfix">
+                <textarea data-elem="message" name="message-to-send" id="message-to-send" placeholder ="Type your message" rows="3"></textarea>
+                <button data-elem="send">Send</button>
+            </div> <!-- end chat-message -->
+        </div> <!-- end chat -->
+    </div> <!-- end container -->
+
+    <script src="/socket.io/socket.io.js" type="application/javascript"></script>
+    <script src="main-socket.js"></script>
+</body>
+</html>
