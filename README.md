@@ -1,10 +1,5 @@
-# chat.v2
-
-websocket
+# chat with bot
 ```
-git clone https://github.com/Blucbo/chat.v2.git
-
-git checkout chat-socket
 
 npm i
 
